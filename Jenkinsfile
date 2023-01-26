@@ -6,7 +6,7 @@ pipeline {
                 sh 'python --version'
                 sh 'export FLASK_APP=flaskr'
                 sh 'export FLASK_ENV=development'
-                sh 'pip install --editable .'
+                sh 'pip3 install --editable .'
                 sh 'flask init-db'
 
             }
