@@ -7,7 +7,7 @@ pipeline {
                 sh 'export FLASK_APP=flaskr'
                 sh 'export FLASK_ENV=development'
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh 'pip3 install --editable .'
+                sh 'pip3 install --user --editable .'
                 sh 'flask init-db'
 
             }
