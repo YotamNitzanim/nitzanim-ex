@@ -14,6 +14,7 @@ pipeline {
                     sh 'export FLASK_ENV=development'
                     sh 'export PATH=$PATH:/home/ubuntu/.jenkins/workspace/app-pipeline_main/.local/bin'
                     sh 'pip install --editable .'
+                    sh 'printenv'
                     sh 'pip install flask' 
                     sh 'flask init-db'
                     sh 'pwd'
