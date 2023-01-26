@@ -2,7 +2,7 @@ pipeline {
     agent { docker { image 'python:3.10.7-alpine' } }
     environment {
         FLASK_APP = 'flaskr'
-        FLASK_APP    = 'development'
+        FLASK_ENV = 'development'
     }
     stages {
         stage('build') {
