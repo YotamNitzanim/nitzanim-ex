@@ -10,7 +10,7 @@ pipeline {
                 sh 'FILES=$(ls)'
                 sh 'mkdir -p src/app' 
                 sh 'pwd'
-                sh 'cp -r $FILES src/app'
+                sh 'cp -r $FILES ./src/app'
                 sh 'cd src/app'
                 sh 'pwd'
                 sh 'ls'
