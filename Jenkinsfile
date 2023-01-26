@@ -16,7 +16,6 @@ pipeline {
                     sh 'pip install --editable .'
                     sh 'printenv'
                     sh 'nohup python -m flask init-db'
-                    sh 'nohup python -m flask run --host=0.0.0.0'
                 }
 
             }
