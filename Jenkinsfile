@@ -16,7 +16,7 @@ pipeline {
                     sh 'pip install --editable .'
                     sh 'printenv'
                     sh 'pip install flask' 
-                    sh 'flask init-db'
+                    sh 'nohup python -m flask init-db'
                     sh 'pwd'
                     sh 'cp -r ./{LICENSE,MANIFEST.in,README.MD,README.md,README.rst,codefresh.yml,docker-flask-codefresh.jpg,flaskr,flaskr.egg-info,instance,requirements.txt,setup.cfg,setup.py,tests} ./src/app'
                     sh 'cd src/app'
