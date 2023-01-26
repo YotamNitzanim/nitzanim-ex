@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bash 'python --version'
+                sh 'python --version'
                 sh 'python --version'
                 sh 'export FLASK_APP=flaskr'
                 sh 'export FLASK_ENV=development'
-                sh 'mkdir -p src/app'
-                bash 'shopt -s extglob'
+                sh 'FILES=$(ls)'
+                sh 'mkdir -p src/app' 
                 sh 'pwd'
-                sh 'cp !(src) src/app'
+                sh 'cp -r $FILES src/app'
                 sh 'cd src/app'
                 sh 'pwd'
                 sh 'ls'
