@@ -5,11 +5,9 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'export FLASK_APP=flaskr'
-                sh 'FLASK_ENV=development'
-                sh 'mkdir -p src/app'
-                sh 'cp -r ./!(src) ./src/app/'
-                sh 'cd src/app'
+                sh 'export FLASK_ENV=development'
                 sh 'pip install --editable .'
+                sh 'flask init-db'
 
             }
         }
