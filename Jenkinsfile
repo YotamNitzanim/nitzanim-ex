@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'python:3.10.7-alpine' } }
+    agent { docker { image 'python:3.8.2' } }
     environment {
         FLASK_APP = 'flaskr'
         FLASK_ENV = 'development'
