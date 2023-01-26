@@ -9,7 +9,7 @@ pipeline {
                     sh 'export FLASK_APP=flaskr'
                     sh 'export FLASK_ENV=development'
                     sh 'export FILES=$(ls)'
-                    sh 'mkdir test'
+                    sh 'mkdir -p test'
                     sh 'cd test && pwd && pip3 install virtualenv' 
                     sh 'virtualenv venv && . venv/bin/activate && pip install --editable . && flask init-db'
                     sh 'mkdir -p src/app' 
