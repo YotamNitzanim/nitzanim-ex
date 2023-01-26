@@ -8,6 +8,7 @@ pipeline {
                     sh 'python --version'
                     sh 'export FLASK_APP=flaskr'
                     sh 'export FLASK_ENV=development'
+                    sh 'export PATH=$PATH:/home/ubuntu/.jenkins/workspace/app-pipeline_main/.local/bin'
                     sh 'pip install --editable . && flask init-db'
                     sh 'mkdir -p src/app' 
                     sh 'pwd'
