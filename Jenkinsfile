@@ -4,6 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
+                sh 'export FLASK_APP=flaskr'
+
             }
         }
     }
