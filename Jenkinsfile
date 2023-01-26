@@ -6,8 +6,8 @@ pipeline {
                 sh 'python --version'
                 sh 'export FLASK_APP=flaskr'
                 sh 'export FLASK_ENV=development'
-                sh 'chown -R jenkins ./local'
-                sh 'chown -R jenkins /var/lib/jenkins/workspace'
+                sh 'chown -R ubuntu ./local'
+                sh 'chown -R ubuntu /var/lib/jenkins/workspace'
                 sh 'pip3 install --editable .'
                 sh 'flask init-db'
 
