@@ -11,7 +11,7 @@ pipeline {
                 sh 'echo "$FILES"'
                 sh 'mkdir -p src/app' 
                 sh 'pwd'
-                sh 'cp -r "$FILES" ./src/app'
+                sh 'cp -r ./{LICENSE,MANIFEST.in,README.MD,README.md,README.rst,codefresh.yml,docker-flask-codefresh.jpg,flaskr,flaskr.egg-info,instance,requirements.txt,setup.cfg,setup.py,tests} ./src/app'
                 sh 'cd src/app'
                 sh 'pwd'
                 sh 'ls'
