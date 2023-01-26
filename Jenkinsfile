@@ -8,7 +8,7 @@ pipeline {
                 sh 'export FLASK_APP=flaskr'
                 sh 'export FLASK_ENV=development'
                 sh 'export FILES=$(ls)'
-                sh 'echo "$FILES"'
+                sh 'virtualenv venv && . venv/bin/activate && pip install --editable . && flask init-db'
                 sh 'mkdir -p src/app' 
                 sh 'pwd'
                 sh 'cp -r ./{LICENSE,MANIFEST.in,README.MD,README.md,README.rst,codefresh.yml,docker-flask-codefresh.jpg,flaskr,flaskr.egg-info,instance,requirements.txt,setup.cfg,setup.py,tests} ./src/app'
