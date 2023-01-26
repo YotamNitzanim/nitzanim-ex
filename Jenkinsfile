@@ -7,7 +7,7 @@ pipeline {
                 sh 'export FLASK_APP=flaskr'
                 sh 'FLASK_ENV=development'
                 sh 'mkdir -p src/app'
-                sh 'cp ./* ./src/app/'
+                sh 'cp -r ./!(src) ./src/app/'
                 sh 'cd src/app'
                 sh 'pip install --editable .'
 
